@@ -5,21 +5,21 @@
 class Cnap < Formula
   desc "CLI for managing CNAP workspaces, clusters, and deployments"
   homepage "https://cnap.tech"
-  version "0.1.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.1.0/cnap_0.1.0_darwin_amd64.tar.gz"
-      sha256 "85c563b2005f697ce88c4e1b5c9bef8c20c2861873444270a5a7d44a9d335b76"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.2.0/cnap_0.2.0_darwin_amd64.tar.gz"
+      sha256 "ae55e3c9408082c8f742b8201b47d8692980e7d6ce636430beefc8952cd2535d"
 
       def install
         bin.install "cnap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.1.0/cnap_0.1.0_darwin_arm64.tar.gz"
-      sha256 "e03a1e7f55514b3affe14ba34dec1caadfef902e1d653cbf92353bebc4912700"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.2.0/cnap_0.2.0_darwin_arm64.tar.gz"
+      sha256 "86d113f0d581eab0ea021749451f9c7996f5be42163277906af290ed0c9a30d7"
 
       def install
         bin.install "cnap"
@@ -29,15 +29,15 @@ class Cnap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.1.0/cnap_0.1.0_linux_amd64.tar.gz"
-      sha256 "33be55548f646b9d23ce3befcfafa6331d9f97fd63b1c91749ad6a5573548557"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.2.0/cnap_0.2.0_linux_amd64.tar.gz"
+      sha256 "0d765c9ad419647ee1c5193ee00473d78c334383881c7517e2b2c70ef6dd6d87"
       def install
         bin.install "cnap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.1.0/cnap_0.1.0_linux_arm64.tar.gz"
-      sha256 "1481f0115c63fd897925336b057b92e6e2974a326cfe6386d3999d768b6dfd32"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.2.0/cnap_0.2.0_linux_arm64.tar.gz"
+      sha256 "0e2f2e50a52ceb90039adf14cdaca1b97c29fb8386c519c5a4b9a24fbacb9ae7"
       def install
         bin.install "cnap"
       end
