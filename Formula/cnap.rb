@@ -11,7 +11,7 @@ class Cnap < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/cnap-tech/cli/releases/download/v0.3.0/cnap_0.3.0_darwin_amd64.tar.gz"
-      sha256 "9104c0a6ec76e76a65d3036e09321189f132eeacaf6a0a8a260ffffa6dee8bee"
+      sha256 "c0f9d67cb10c51c2d4622d0249074eee8491d9b8793b52a2765f14e9e28bd6a9"
 
       def install
         bin.install "cnap"
@@ -20,7 +20,7 @@ class Cnap < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/cnap-tech/cli/releases/download/v0.3.0/cnap_0.3.0_darwin_arm64.tar.gz"
-      sha256 "257674655fe17c3357188edb5c40b660045511a12deabaf0b334d3001599d754"
+      sha256 "e01e32280f46812699db2caed3e80a2a0126ef3176cc633511d39e7d92febe39"
 
       def install
         bin.install "cnap"
@@ -32,7 +32,7 @@ class Cnap < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/cnap-tech/cli/releases/download/v0.3.0/cnap_0.3.0_linux_amd64.tar.gz"
-      sha256 "1ce10fe948800b942b9fc029528426dc1efac0228c124363865d1148a521e549"
+      sha256 "38aa8ab92612b9fd91c70469a9b8ed6e425cc4cbde9504e537c037b19a524c00"
       def install
         bin.install "cnap"
         generate_completions_from_executable(bin/"cnap", "completion")
@@ -40,7 +40,7 @@ class Cnap < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/cnap-tech/cli/releases/download/v0.3.0/cnap_0.3.0_linux_arm64.tar.gz"
-      sha256 "819987dde9ffb8183491df78632215e85f5aeabd660078110b056e93a93e54c4"
+      sha256 "c8e814ac4a026a46bdcad98f71ebed42daebaf5072f0c573bf1d61d0d7e54415"
       def install
         bin.install "cnap"
         generate_completions_from_executable(bin/"cnap", "completion")
