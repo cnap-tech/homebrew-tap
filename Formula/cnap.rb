@@ -5,42 +5,50 @@
 class Cnap < Formula
   desc "CLI for managing CNAP workspaces, clusters, and deployments"
   homepage "https://cnap.tech"
-  version "0.2.0"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.2.0/cnap_0.2.0_darwin_amd64.tar.gz"
-      sha256 "ae55e3c9408082c8f742b8201b47d8692980e7d6ce636430beefc8952cd2535d"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.3.0/cnap_0.3.0_darwin_amd64.tar.gz"
+      sha256 "9104c0a6ec76e76a65d3036e09321189f132eeacaf6a0a8a260ffffa6dee8bee"
 
       def install
         bin.install "cnap"
+        generate_completions_from_executable(bin/"cnap", "completion")
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.2.0/cnap_0.2.0_darwin_arm64.tar.gz"
-      sha256 "86d113f0d581eab0ea021749451f9c7996f5be42163277906af290ed0c9a30d7"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.3.0/cnap_0.3.0_darwin_arm64.tar.gz"
+      sha256 "257674655fe17c3357188edb5c40b660045511a12deabaf0b334d3001599d754"
 
       def install
         bin.install "cnap"
+        generate_completions_from_executable(bin/"cnap", "completion")
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.2.0/cnap_0.2.0_linux_amd64.tar.gz"
-      sha256 "0d765c9ad419647ee1c5193ee00473d78c334383881c7517e2b2c70ef6dd6d87"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.3.0/cnap_0.3.0_linux_amd64.tar.gz"
+      sha256 "1ce10fe948800b942b9fc029528426dc1efac0228c124363865d1148a521e549"
       def install
         bin.install "cnap"
+        generate_completions_from_executable(bin/"cnap", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.2.0/cnap_0.2.0_linux_arm64.tar.gz"
-      sha256 "0e2f2e50a52ceb90039adf14cdaca1b97c29fb8386c519c5a4b9a24fbacb9ae7"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.3.0/cnap_0.3.0_linux_arm64.tar.gz"
+      sha256 "819987dde9ffb8183491df78632215e85f5aeabd660078110b056e93a93e54c4"
       def install
         bin.install "cnap"
+        generate_completions_from_executable(bin/"cnap", "completion")
       end
     end
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/cnap --version")
   end
 end
