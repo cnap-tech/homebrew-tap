@@ -5,12 +5,12 @@
 class Cnap < Formula
   desc "CLI for managing CNAP workspaces, clusters, and deployments"
   homepage "https://docs.cnap.tech/cli"
-  version "0.6.0"
+  version "0.6.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.6.0/cnap_0.6.0_darwin_amd64.tar.gz"
-      sha256 "37258f50f5d046477fb3429b08e0ebc68be3b91fb8716f67f76bfbfde26a6a9a"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.6.1/cnap_0.6.1_darwin_amd64.tar.gz"
+      sha256 "3724b0b22fa9f2b88431ae34c5515fce5590b1b0950c8a4389dd03d3114dd463"
 
       def install
         bin.install "cnap"
@@ -20,8 +20,8 @@ class Cnap < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.6.0/cnap_0.6.0_darwin_arm64.tar.gz"
-      sha256 "dbf86f913000d50494bd28066bdb7b5f4c4ec4cc7de978713e54a56e9de0bb21"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.6.1/cnap_0.6.1_darwin_arm64.tar.gz"
+      sha256 "0b87a594877eb7edfbb4aa6fb8ac92156c276ee7d649fb58b7d18a9fd586a812"
 
       def install
         bin.install "cnap"
@@ -34,8 +34,8 @@ class Cnap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.6.0/cnap_0.6.0_linux_amd64.tar.gz"
-      sha256 "8608f319ee568b717258b56b6e60d22ed28288aa91b5a735373a12f14e161aec"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.6.1/cnap_0.6.1_linux_amd64.tar.gz"
+      sha256 "e9c8fa03958ea586944987a142c8ef060944faea11e1ded9c40cf32449f5f600"
       def install
         bin.install "cnap"
         bash_completion.install "completions/cnap.bash" => "cnap"
@@ -44,8 +44,8 @@ class Cnap < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cnap-tech/cli/releases/download/v0.6.0/cnap_0.6.0_linux_arm64.tar.gz"
-      sha256 "50d1e9a457ec901a1c933367e9da4a36986dada0604a05a883d333724708e817"
+      url "https://github.com/cnap-tech/cli/releases/download/v0.6.1/cnap_0.6.1_linux_arm64.tar.gz"
+      sha256 "a1da387b74167a71f5d4ec480ca35564841e05c715c2af2f7d99795dd1dd15f6"
       def install
         bin.install "cnap"
         bash_completion.install "completions/cnap.bash" => "cnap"
