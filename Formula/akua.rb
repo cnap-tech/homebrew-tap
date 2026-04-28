@@ -1,37 +1,32 @@
 # frozen_string_literal: true
 
-# Homebrew formula for akua — cloud-native package build and
-# transform toolkit. Installs the prebuilt binary from the official
-# GitHub Release (no from-source build).
-#
-# Auto-bumped by the cli-release.yml workflow in cnap-tech/akua via
-# `mislav/bump-homebrew-formula-action@v3`; manual edits here will be
-# overwritten on the next tag push.
+# Auto-bumped by cli-release.yml in cnap-tech/akua on every
+# tag push. Manual edits get overwritten.
 class Akua < Formula
   desc "Cloud-native package build, transform, and preview toolkit"
   homepage "https://github.com/cnap-tech/akua"
-  version "0.1.0"
+  version "0.6.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/cnap-tech/akua/releases/download/akua-v#{version}/akua-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "72f41c4b0ac4f98a78655d7541636e444c9be3186657683402a71332e7c1d63f"
+      sha256 "b281deba41aebcc4dae318cca645b394e0dec581ec7495993b906aa647575047"
     end
     on_intel do
       url "https://github.com/cnap-tech/akua/releases/download/akua-v#{version}/akua-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "c43a80f510f13c550ddaaad9e5c92174810b09eb6ed1848212ea7c8ee6ac69bb"
+      sha256 "ccd1f2d62929c97edd58e4e9c87980eabb485e4568c09a2d8787952f63b4ced8"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/cnap-tech/akua/releases/download/akua-v#{version}/akua-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "60ab3e279b6c71c7a72fef948e779927d9e15d55f5801d0f35258e290f881cc0"
+      sha256 "536c1632ed95bb25ee47753749761379a6f5619ae5017bf30fd1fcc0deefe538"
     end
     on_intel do
       url "https://github.com/cnap-tech/akua/releases/download/akua-v#{version}/akua-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b292e72948d41a5ba9fe7cd601a8136c828bf28b8d52043bfab0b65c9165eb0a"
+      sha256 "17a33531c85df0b4cd6208f523934245a1329959e7f0043dc8008eefce95fb72"
     end
   end
 
